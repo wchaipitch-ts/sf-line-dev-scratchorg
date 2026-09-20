@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unread_Count__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description
+  >Inbound messages not yet read by the owner. +1 per inbound message; reset when the rep opens the chat.</description>
+    <externalId>false</externalId>
+    <label>Unread Count</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

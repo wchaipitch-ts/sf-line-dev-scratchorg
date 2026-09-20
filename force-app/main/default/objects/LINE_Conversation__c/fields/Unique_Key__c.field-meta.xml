@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unique_Key__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >&lt;Channel_Id__c&gt;:&lt;LINE_User_Id__c&gt;. Upsert key: one conversation per LINE user per OA.</description>
+    <externalId>true</externalId>
+    <label>Unique Key</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

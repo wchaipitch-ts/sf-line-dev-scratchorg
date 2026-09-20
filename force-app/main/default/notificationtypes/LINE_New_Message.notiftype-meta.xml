@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomNotificationType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customNotifTypeName>LINE New Message</customNotifTypeName>
+    <description
+  >Alerts the conversation owner about a new inbound LINE message.</description>
+    <desktop>true</desktop>
+    <masterLabel>LINE New Message</masterLabel>
+    <mobile>true</mobile>
+</CustomNotificationType>

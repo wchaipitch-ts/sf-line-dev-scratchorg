@@ -1,0 +1,20 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "LINE Connect",
+      "versionName": "MVP",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "Connects LINE Official Accounts to Salesforce"
+    },
+    {
+      "path": "unpackaged",
+      "default": false
+    }
+  ],
+  "name": "sf-line-dev",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "67.0"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Message_Retention_Months__c</fullName>
+    <description
+  >Messages older than this are deleted nightly. 0 = keep forever (default).</description>
+    <label>Message Retention (Months)</label>
+    <precision>3</precision>
+    <scale>0</scale>
+    <type>Number</type>
+</CustomField>

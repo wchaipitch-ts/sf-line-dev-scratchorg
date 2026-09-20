@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >The Contact this LINE user is linked to. Blank until linked (invite code, auto-link or manual link).</description>
+    <externalId>false</externalId>
+    <label>Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>LINE Conversations</relationshipLabel>
+    <relationshipName>LINE_Conversations</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_OA_Requires_Rep</fullName>
+    <active>true</active>
+    <description
+  >An active OA must have an assigned rep, because the rep owns its conversations.</description>
+    <errorConditionFormula
+  >Is_Active__c &amp;&amp; ISBLANK(Assigned_Rep__c)</errorConditionFormula>
+    <errorDisplayField>Assigned_Rep__c</errorDisplayField>
+    <errorMessage>An active LINE OA must have an assigned rep.</errorMessage>
+</ValidationRule>

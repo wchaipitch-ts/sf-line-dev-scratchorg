@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_At__c</fullName>
+    <description
+  >Inbound: the webhook event timestamp. Outbound: when it was sent. Used for ordering and keyset paging.</description>
+    <externalId>false</externalId>
+    <label>Sent At</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

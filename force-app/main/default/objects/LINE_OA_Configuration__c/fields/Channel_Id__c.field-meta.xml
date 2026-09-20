@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >LINE Messaging API channel ID. Unique; used as the key for the channel secret in the protected credential setting.</description>
+    <externalId>true</externalId>
+    <label>Channel ID</label>
+    <length>20</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

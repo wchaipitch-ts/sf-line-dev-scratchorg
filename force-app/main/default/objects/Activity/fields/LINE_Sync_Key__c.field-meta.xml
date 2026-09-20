@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LINE_Sync_Key__c</fullName>
+    <description
+  >&lt;ConversationId&gt;:&lt;yyyy-MM-dd&gt; on the daily LINE conversation Event. Checked before insert so reruns don't create duplicates.</description>
+    <externalId>false</externalId>
+    <label>LINE Sync Key</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

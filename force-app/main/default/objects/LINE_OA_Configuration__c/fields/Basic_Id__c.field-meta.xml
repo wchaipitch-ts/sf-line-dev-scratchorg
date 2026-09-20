@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Basic_Id__c</fullName>
+    <description
+  >The OA's basic ID (e.g. @123abcde), used for add-friend links and QR invites.</description>
+    <externalId>false</externalId>
+    <label>Basic ID</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

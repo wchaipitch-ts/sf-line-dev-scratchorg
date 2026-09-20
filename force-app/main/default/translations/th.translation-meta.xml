@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>LINE Connect</label>
+        <name>LINE_App_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>เกิดข้อผิดพลาด โปรดลองอีกครั้งหรือติดต่อผู้ดูแล LINE</label>
+        <name>LINE_Error_Generic</name>
+    </customLabels>
+    <customLabels>
+        <label>คุณไม่มีสิทธิ์เข้าถึงการสนทนา LINE นี้</label>
+        <name>LINE_Error_No_Access</name>
+    </customLabels>
+    <customLabels>
+        <label>เฉพาะผู้ดูแล LINE เท่านั้นที่ทำรายการนี้ได้</label>
+        <name>LINE_Error_Admin_Required</name>
+    </customLabels>
+    <customLabels>
+        <label>ข้อมูลรับรองของ LINE OA ไม่ถูกต้อง โปรดติดต่อผู้ดูแล LINE</label>
+        <name>LINE_Error_Credentials_Invalid</name>
+    </customLabels>
+    <customLabels>
+        <label>LINE OA นี้ใช้โควตาข้อความรายเดือนครบแล้ว</label>
+        <name>LINE_Error_Monthly_Limit</name>
+    </customLabels>
+    <customLabels>
+        <label>ข้อความ LINE ใหม่จาก {0}</label>
+        <name>LINE_Notification_New_Message_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>เชื่อมบัญชีของฉัน #{0}</label>
+        <name>LINE_Invite_Message_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>ขอบคุณค่ะ บัญชี LINE ของคุณเชื่อมต่อเรียบร้อยแล้ว</label>
+        <name>LINE_Invite_Linked_Reply</name>
+    </customLabels>
+    <customLabels>
+        <label>รหัสนี้หมดอายุแล้ว โปรดขอรหัสใหม่จากพนักงานขายของคุณ</label>
+        <name>LINE_Invite_Expired_Reply</name>
+    </customLabels>
+    <customLabels>
+        <label>[รูปภาพ]</label>
+        <name>LINE_Preview_Image</name>
+    </customLabels>
+    <customLabels>
+        <label>[วิดีโอ]</label>
+        <name>LINE_Preview_Video</name>
+    </customLabels>
+    <customLabels>
+        <label>[ข้อความเสียง]</label>
+        <name>LINE_Preview_Audio</name>
+    </customLabels>
+    <customLabels>
+        <label>[ไฟล์] {0}</label>
+        <name>LINE_Preview_File</name>
+    </customLabels>
+    <customLabels>
+        <label>[สติกเกอร์]</label>
+        <name>LINE_Preview_Sticker</name>
+    </customLabels>
+    <customLabels>
+        <label>[ตำแหน่ง] {0}</label>
+        <name>LINE_Preview_Location</name>
+    </customLabels>
+    <customLabels>
+        <label>[ข้อความที่ไม่รองรับ]</label>
+        <name>LINE_Preview_Unsupported</name>
+    </customLabels>
+    <customLabels>
+        <label>โปรดตั้งค่า Site base URL ในการตั้งค่า LINE ก่อน</label>
+        <name>LINE_Error_Site_Url_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label>พนักงานขายที่กำหนดต้องเป็นผู้ใช้ที่ใช้งานอยู่</label>
+        <name>LINE_Error_Rep_Inactive</name>
+    </customLabels>
+    <customLabels>
+        <label>กำลังรอทดสอบ Webhook</label>
+        <name>LINE_Webhook_Test_Pending</name>
+    </customLabels>
+</Translations>

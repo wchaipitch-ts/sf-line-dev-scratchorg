@@ -1,0 +1,4 @@
+<!-- Placeholder home page for the LineWebhook Site in scratch/QA orgs. Not packaged. -->
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+  <p>OK</p>
+</apex:page>

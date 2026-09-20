@@ -1,0 +1,21 @@
+# List files or directories below to ignore them when running prettier
+# More information: https://prettier.io/docs/en/ignore.html
+#
+
+**/staticresources/**
+.localdevserver
+.sfdx
+.sf
+.vscode
+
+coverage/
+
+# Reference retrieve of the QA org (not project source) and generated reports
+archive/
+reports/
+manifest/
+
+# Hand-written spec docs: keep their table layout as authored
+docs/
+CLAUDE.md
+README.md

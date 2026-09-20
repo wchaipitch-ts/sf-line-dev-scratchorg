@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webhook_Event_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >LINE webhookEventId of an inbound message. Unique upsert key that makes redeliveries no-ops.</description>
+    <externalId>true</externalId>
+    <label>Webhook Event ID</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

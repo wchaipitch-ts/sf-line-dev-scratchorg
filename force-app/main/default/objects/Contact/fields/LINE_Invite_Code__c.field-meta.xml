@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LINE_Invite_Code__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description
+  >One-time QR invite code (alphabet A-H, J-N, P-Z, 2-9). Cleared once used.</description>
+    <externalId>true</externalId>
+    <label>LINE Invite Code</label>
+    <length>8</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

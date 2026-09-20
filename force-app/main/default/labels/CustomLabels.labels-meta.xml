@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>LINE_App_Name</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product name</shortDescription>
+        <value>LINE Connect</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Generic</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Generic error shown to users</shortDescription>
+        <value
+    >Something went wrong. Please try again or contact your LINE admin.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_No_Access</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Access denied to a conversation</shortDescription>
+        <value>You don't have access to this LINE conversation.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Admin_Required</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Missing LINE_Admin custom permission</shortDescription>
+        <value>Only LINE admins can do this.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Credentials_Invalid</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LINE returned 401</shortDescription>
+        <value>LINE OA credentials are invalid. Contact your LINE admin.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Monthly_Limit</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LINE returned 429 monthly limit</shortDescription>
+        <value>This LINE OA has used its monthly message allowance.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Notification_New_Message_Title</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Custom notification title. {0} = customer display name</shortDescription>
+        <value>New LINE message from {0}</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Invite_Message_Text</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Pre-filled invite text. {0} = invite code; keep the # before it.</shortDescription>
+        <value>Link my account #{0}</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Invite_Linked_Reply</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Reply after a successful invite link</shortDescription>
+        <value>Thank you! Your LINE account is now linked.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Invite_Expired_Reply</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Reply for an expired or unknown invite code</shortDescription>
+        <value
+    >This code has expired. Please ask your sales rep for a new one.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Image</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inbox preview for an image message</shortDescription>
+        <value>[Image]</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Video</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inbox preview for a video message</shortDescription>
+        <value>[Video]</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Audio</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inbox preview for an audio message</shortDescription>
+        <value>[Audio]</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_File</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Inbox preview for a file. {0} = file name</shortDescription>
+        <value>[File] {0}</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Sticker</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inbox preview for a sticker</shortDescription>
+        <value>[Sticker]</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Location</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Inbox preview for a location. {0} = place</shortDescription>
+        <value>[Location] {0}</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Preview_Unsupported</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Inbox preview for other message types</shortDescription>
+        <value>[Unsupported message]</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Site_Url_Missing</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Registering an OA without a Site URL</shortDescription>
+        <value>Set the Site base URL in LINE settings first.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Rep_Inactive</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assigned rep is not an active user</shortDescription>
+        <value>The assigned rep must be an active user.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Webhook_Test_Pending</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Webhook status right after registration</shortDescription>
+        <value>Webhook test pending</value>
+    </labels>
+</CustomLabels>

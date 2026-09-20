@@ -1,0 +1,6 @@
+# Salesforce Code Analyzer configuration (picked up automatically from the project root).
+# The package contains no Flows, and the Flow engine needs Python 3.10+, so it is disabled.
+# Re-enable it if a Flow is ever added to force-app (see docs/DECISIONS.md).
+engines:
+  flow:
+    disable_engine: true

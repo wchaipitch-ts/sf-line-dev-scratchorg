@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LINE_Conversation__c</fullName>
+    <description
+  >Parent conversation. Master-detail: sharing is controlled by the conversation, reparenting is off.</description>
+    <label>LINE Conversation</label>
+    <referenceTo>LINE_Conversation__c</referenceTo>
+    <relationshipLabel>LINE Messages</relationshipLabel>
+    <relationshipName>LINE_Messages</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

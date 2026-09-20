@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LINE_User_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >The customer's LINE user ID. Identity across all of the company's LINE OAs; used to auto-link new conversations. Set when linked.</description>
+    <externalId>true</externalId>
+    <label>LINE User ID</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

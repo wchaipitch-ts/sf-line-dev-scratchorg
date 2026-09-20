@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bot_User_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >The OA's bot user ID (GET /v2/bot/info userId). Equals the destination value of incoming webhooks and routes them to this OA.</description>
+    <externalId>true</externalId>
+    <label>Bot User ID</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text__c</fullName>
+    <description
+  >Message text (LINE maximum is 5,000 characters). Always rendered as plain text.</description>
+    <externalId>false</externalId>
+    <label>Text</label>
+    <length>5000</length>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

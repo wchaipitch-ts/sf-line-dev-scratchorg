@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>LineWebhookResource</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description
+  >Only for the LINE webhook Site's guest user: run the webhook class and publish LINE_Webhook_Event__e. No record access.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>LINE Webhook Guest</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>LINE_Webhook_Event__e</object>
+        <viewAllFields>false</viewAllFields>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

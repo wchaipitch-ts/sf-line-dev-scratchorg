@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Contact_Owner_On_Reassign__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description
+  >When an OA is reassigned, also change the owner of its linked Contacts.</description>
+    <label>Update Contact Owner On Reassign</label>
+    <type>Checkbox</type>
+</CustomField>
