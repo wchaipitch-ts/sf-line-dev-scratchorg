@@ -172,4 +172,38 @@
     >Webhook status right after registration</shortDescription>
         <value>Webhook test pending</value>
     </labels>
+    <labels>
+        <fullName>LINE_Error_Message_Empty</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Empty outbound text</shortDescription>
+        <value>Type a message before sending.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Message_Too_Long</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Outbound text over the LINE limit. {0} = limit</shortDescription>
+        <value>A LINE message can be at most {0} characters.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Send_Failed</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Generic outbound failure</shortDescription>
+        <value>The message could not be sent to LINE.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Error_Conversation_Inactive</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Conversation status is Unfollowed</shortDescription>
+        <value
+    >This customer has blocked or removed the LINE account, so messages can't be delivered.</value>
+    </labels>
 </CustomLabels>

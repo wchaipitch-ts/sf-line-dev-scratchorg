@@ -63,7 +63,7 @@ From 02 §2. Each class carries a justification comment in code. Filled in as ea
 | `LineOAConfigAdminService` | Writes the secret and OA configurations; the caller checks `LINE_Admin` (M8) | ✅ M3 (anonymous-Apex only until M8) |
 | `LineLinkService` | Invite-code links from the inbound path; user-initiated paths check access in user mode first | M6 |
 | `LineCalloutQueueable` | Async follow-up to inbound processing | M3 |
-| `LineOutboundService` | Called after the controller checks access in user mode; writes the message record | M4 |
+| `LineOutboundService` | Called after the controller checks access in user mode; writes the message record | ✅ M4 (class-wide `sfge` suppression with reason, DEC-20) |
 | `LineOAConfigAdminService` | Called after `LineAdminController` checks the `LINE_Admin` custom permission; writes the secret | M3/M8 |
 | `LineOAConfigTriggerHandler` | Starts the reassignment batch | M8 |
 
@@ -79,7 +79,12 @@ Implemented (M1):
 - `LINE_Admin`: the above + OA configuration CRUD, View All on conversations and messages, error log Read/Edit/Delete/View All (field-level read-only), custom permission `LINE_Admin`.
 - Neither permission set grants access to Contact or Event objects themselves; that stays with the subscriber's profiles.
 
-Pending: the user-mode controllers (M4, M5, M8).
+Implemented (M4): `LineChatController` is `with sharing`; `sendText` queries the conversation `WITH USER_MODE` (so OWD Private
+decides who may reply) and checks `LINE_Message__c.isCreateable()` before any callout. Tests prove Rep B cannot send to Rep A's
+conversation and that nothing is sent or stored when the check fails. Errors reach the LWC as `AuraHandledException` with a
+Custom Label; LINE's own wording is passed through only for errors the rep can act on (monthly limit, invalid text).
+
+Pending: the remaining controller methods (M5) and `LineAdminController` (M8).
 
 ## 6. Client side (LWC)
 
@@ -102,5 +107,6 @@ Run: `npm run scan` (Recommended + Security + AppExchange rules, fails on High/C
 |---|---|---|---|
 | 2026-09-19 | `force-app` (empty, M0) | 0 | Baseline |
 | 2026-09-19 | `force-app` (M1 metadata) | 0 | 4 Moderate `ProtectSensitiveData` name-heuristic hits, justified in DECISIONS §3 |
+| 2026-09-22 | `force-app` (M4 outbound text) | 0 (5 graph-engine Highs suppressed class-wide on `LineOutboundService` with reason, DEC-20) | 36 Moderate, 165 Low: unchanged categories |
 | 2026-09-19 | `force-app` (M3 webhook + inbound) | 0 (2 graph-engine Highs + 1 Moderate suppressed with reasons, DEC-18) | 35 Moderate (complexity/parameter style, DTO naming, name heuristics), 157 Low (ApexDoc on DTO fields/tests) |
 | 2026-09-19 | `force-app` (M2 core services) | 0 (1 High suppressed with reason: `ApexSuggestUsingNamedCred`, DEC-16) | 23 Moderate (style/complexity, DTO naming, name heuristics), 90 Low (ApexDoc on DTO fields/tests). All in DECISIONS §3 |

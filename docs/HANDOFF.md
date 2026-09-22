@@ -1,6 +1,6 @@
 # Handoff — state of the build
 
-Last updated: **2026-09-20**, after M3. Read `README.md` first, then this file, then `DECISIONS.md`.
+Last updated: **2026-09-22**, after M4. Read `README.md` first, then this file, then `DECISIONS.md`.
 This file says where the work stands, what's open, and which traps already cost time. Keep it current at the end of each milestone.
 
 ## 1. Where we are
@@ -11,7 +11,8 @@ This file says where the work stands, what's open, and which traps already cost 
 | M1 Data model & security metadata | **Done.** Deployed to the scratch org. Six approval items are still open (§4). |
 | M2 Core services | **Done.** Logger, settings, credential store, namespace, trigger base, API client, DTOs, test factory and HTTP mock. |
 | M3 Registration + inbound | **Code done and proven live with a real LINE OA** in a scratch org. **Beta 1 and the QA-org run are blocked** on the namespace (§4). |
-| M4 Outbound text | **Next.** |
+| M4 Outbound text | **Code done**, 133/133 tests pass. Live send still to do (needs the channel secret re-entered in the new scratch org). |
+| M5 Chat panel (`lineChat`) | **Next.** First LWC, so the first Jest tests. |
 
 **Order change:** M1–M3 were built before the Dev Hub and namespace existed, with the user's approval (DECISIONS DEC-08).
 Development runs in **non-namespaced** scratch orgs created from `sf-line-dev` until the namespace is linked. Everything must be
@@ -25,7 +26,7 @@ Code Analyzer **0 Critical/High**, prettier and ESLint clean. No LWC yet, so the
 
 | Alias | What it is | Notes |
 |---|---|---|
-| `line-dev` | Development scratch org, **non-namespaced** | Created 2026-09-19 with `DEVHUB=sf-line-dev DAYS=7`, so it **expires around 2026-09-26**. Recreate with `DEVHUB=sf-line-dev ./scripts/setup-scratch.sh`. |
+| `line-dev` | Development scratch org, **non-namespaced** | Rebuilt 2026-09-22 with `DAYS=30`, so it **expires 2026-10-22**. Recreate with `DEVHUB=sf-line-dev DAYS=30 ./scripts/setup-scratch.sh`. The LINE OA is **not** registered in it yet (the secret must be re-entered through Setup). |
 | `sf-line-dev` | Developer Edition. Spec calls it the **QA org**; it is currently also the only enabled **Dev Hub** | Never `sf project deploy` here: installed package versions only. It also holds ~2,700 unrelated SDO demo components. |
 | `line-devhub` | The intended Dev Hub alias | **Doesn't exist yet.** |
 | namespace org | A new Developer Edition the user created for the namespace | Namespace registered; **linking to the Dev Hub fails** (§4). |
@@ -55,6 +56,10 @@ CustomNotificationType survives packaging. All three are Beta 1 checks.
 
 ## 4. Open items, in the order they block work
 
+0. **A new namespace is being registered by the BA.** The first one (`tsth_lineoa_sf`, linked to `sf-line-dev` on 2026-09-21) was
+   judged too long and too agency-specific for a product that may be listed on AppExchange. Once the new one is linked: set it in
+   `sfdx-project.json`, create a **namespaced** scratch org, redeploy, rerun the tests, then `sf package create` and Beta 1.
+   Dev Hub stays `sf-line-dev`.
 1. **Namespace link fails** with `error=invalid_request&error_description=missing required code challenge` when clicking
    **Link Namespace** in the Dev Hub. Salesforce's own pop-up doesn't send PKCE. Tried: nothing yet on the user's side beyond
    retrying. To try: turn off "Require PKCE" in Setup → OAuth and OpenID Connect Settings (namespace org, then Dev Hub); untick

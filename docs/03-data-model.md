@@ -102,7 +102,7 @@ Get the Contact and OA through the parent (`LINE_Conversation__r.Contact__c`), n
 | File_Name__c | Text(255) | File messages |
 | File_Size__c | Number(12,0) | Bytes |
 | Content_Document_Id__c | Text(18) | Downloaded or sent file |
-| Public_Url__c | URL(1000) | Outbound media or document link (ContentDistribution) |
+| Public_Url__c | Long Text Area(1000) | Outbound media or document link (ContentDistribution). **Not** a URL field: URL and Text fields stop at 255 characters and Salesforce content URLs can be longer (DECISIONS DEC-14) |
 | Sticker_Package_Id__c / Sticker_Id__c | Text(20) | Sticker display |
 | Location__c | Text(255) | "title, address (lat,long)" |
 
@@ -159,8 +159,17 @@ Implemented only in `LineLinkService`.
 | Permission set | Assigned to | Grants |
 |---|---|---|
 | `LINE_Chat_User` | Sales reps, managers | LINE_Conversation__c Read/Edit; LINE_Message__c Read/Create; LINE_OA_Configuration__c Read; Contact `LINE_User_Id__c` Read/Edit, `LINE_OA_Configuration__c` Read/Edit, invite fields Read/Edit; Event Read + `LINE_Sync_Key__c` Read; Apex `LineChatController`; app + tabs |
-| `LINE_Admin` | Admins | Everything in Chat User + LINE_OA_Configuration__c CRUD; View All on conversations/messages; `LINE_Error_Log__c` Read/Delete; custom permission `LINE_Admin`; Apex `LineAdminController`; LINE Admin tab |
-| `LINE_Webhook_Guest` | The Site's guest user | Apex `LineWebhookResource` **only**; Create on `LINE_Webhook_Event__e`. No object read. |
+| `LINE_Admin` | Admins | Everything in Chat User + LINE_OA_Configuration__c CRUD; View All on conversations/messages; `LINE_Error_Log__c` Read/**Edit**/Delete + **View All**; custom permission `LINE_Admin`; Apex `LineAdminController`; LINE Admin tab |
+| `LINE_Webhook_Guest` | The Site's guest user | Apex `LineWebhookResource` **only**; Create **and Read** on `LINE_Webhook_Event__e`. No object read. |
 
 The Automated Process user needs no permission set, because processing runs in system mode.
 There's no permission to read `LINE_OA_Credential__c`; protected settings are reachable only from package code.
+
+**Three grants the platform forces** (approved 2026-09-22, DECISIONS DEC-13):
+
+- `LINE_Error_Log__c` **Edit** for `LINE_Admin`: Salesforce refuses Delete without Edit. Field-level access stays read-only, so
+  admins can delete a log but not rewrite one.
+- `LINE_Error_Log__c` **View All** for `LINE_Admin`: the object is Private and most records are written by Automated Process,
+  so without it an admin sees nothing, which contradicts §4 "visible to `LINE_Admin`".
+- `LINE_Webhook_Event__e` **Read** for `LINE_Webhook_Guest`: Salesforce refuses Create without Read. On a platform event, Read
+  only allows subscribing to the event stream, which a guest session can't do in practice; it grants no access to records.

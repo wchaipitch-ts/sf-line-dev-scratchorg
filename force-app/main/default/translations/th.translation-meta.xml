@@ -80,4 +80,21 @@
         <label>กำลังรอทดสอบ Webhook</label>
         <name>LINE_Webhook_Test_Pending</name>
     </customLabels>
+    <customLabels>
+        <label>กรุณาพิมพ์ข้อความก่อนส่ง</label>
+        <name>LINE_Error_Message_Empty</name>
+    </customLabels>
+    <customLabels>
+        <label>ข้อความ LINE ต้องไม่เกิน {0} ตัวอักษร</label>
+        <name>LINE_Error_Message_Too_Long</name>
+    </customLabels>
+    <customLabels>
+        <label>ไม่สามารถส่งข้อความไปยัง LINE ได้</label>
+        <name>LINE_Error_Send_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label
+    >ลูกค้ารายนี้บล็อกหรือลบบัญชี LINE แล้ว จึงไม่สามารถส่งข้อความได้</label>
+        <name>LINE_Error_Conversation_Inactive</name>
+    </customLabels>
 </Translations>

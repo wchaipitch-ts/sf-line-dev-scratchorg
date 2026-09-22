@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Public_Url__c</fullName>
+    <description
+  >Expiring public URL of an outbound image, video, audio file or document link (ContentDistribution). Long Text Area, not URL: URL and Text fields stop at 255 characters and Salesforce content URLs can be longer (DECISIONS DEC-14).</description>
+    <externalId>false</externalId>
+    <label>Public URL</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>
