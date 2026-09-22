@@ -1,6 +1,6 @@
 # Handoff — state of the build
 
-Last updated: **2026-09-22**, after M4. Read `README.md` first, then this file, then `DECISIONS.md`.
+Last updated: **2026-09-22**, after M5. Read `README.md` first, then this file, then `DECISIONS.md`.
 This file says where the work stands, what's open, and which traps already cost time. Keep it current at the end of each milestone.
 
 ## 1. Where we are
@@ -11,16 +11,20 @@ This file says where the work stands, what's open, and which traps already cost 
 | M1 Data model & security metadata | **Done.** Deployed to the scratch org. Six approval items are still open (§4). |
 | M2 Core services | **Done.** Logger, settings, credential store, namespace, trigger base, API client, DTOs, test factory and HTTP mock. |
 | M3 Registration + inbound | **Code done and proven live with a real LINE OA** in a scratch org. **Beta 1 and the QA-org run are blocked** on the namespace (§4). |
-| M4 Outbound text | **Code done**, 133/133 tests pass. Live send still to do (needs the channel secret re-entered in the new scratch org). |
-| M5 Chat panel (`lineChat`) | **Next.** First LWC, so the first Jest tests. |
+| M4 Outbound text | **Done**, verified live: a reply sent from Salesforce reached a real phone. |
+| M5 Chat panel (`lineChat`) | **Code done**: 146 Apex tests + 10 Jest tests pass. Visual check on a Contact record page still pending; one open question in DEC-21 (load-older button vs scroll-up). |
+| M6 Linking + inbox | **Next**, unless the namespace lands first, in which case packaging (Beta 1) comes before it. |
 
 **Order change:** M1–M3 were built before the Dev Hub and namespace existed, with the user's approval (DECISIONS DEC-08).
 Development runs in **non-namespaced** scratch orgs created from `sf-line-dev` until the namespace is linked. Everything must be
 re-tested in a namespaced org at Beta 1: the REST URL, the CustomNotificationType lookup and the protected custom setting all
 behave differently with a namespace.
 
-Checks at the end of M3: **117/117 Apex tests pass**, LINE classes **94.4%** coverage (lowest class 91%),
-Code Analyzer **0 Critical/High**, prettier and ESLint clean. No LWC yet, so there are no Jest tests.
+Checks at the end of M5: **146/146 Apex tests** and **10/10 Jest tests** pass, LINE classes **94.2%** coverage
+(lowest class 90%), Code Analyzer **0 Critical/High**, prettier and ESLint clean.
+
+The scratch org holds live test data: one registered LINE OA, a conversation with real messages, and a Contact
+("Chaipitch") linked to it **by a one-off script**, since linking is M6.
 
 ## 2. Orgs and access
 

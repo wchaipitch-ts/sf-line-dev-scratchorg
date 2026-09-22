@@ -97,4 +97,52 @@
     >ลูกค้ารายนี้บล็อกหรือลบบัญชี LINE แล้ว จึงไม่สามารถส่งข้อความได้</label>
         <name>LINE_Error_Conversation_Inactive</name>
     </customLabels>
+    <customLabels>
+        <label>แชท LINE</label>
+        <name>LINE_Chat_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>ผู้ติดต่อรายนี้ยังไม่มีการสนทนา LINE</label>
+        <name>LINE_Chat_No_Conversations</name>
+    </customLabels>
+    <customLabels>
+        <label>เชิญผ่าน LINE</label>
+        <name>LINE_Chat_Invite</name>
+    </customLabels>
+    <customLabels>
+        <label>ยังไม่มีข้อความ</label>
+        <name>LINE_Chat_No_Messages</name>
+    </customLabels>
+    <customLabels>
+        <label>เขียนข้อความ…</label>
+        <name>LINE_Chat_Input_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>ส่ง</label>
+        <name>LINE_Chat_Send</name>
+    </customLabels>
+    <customLabels>
+        <label>โหลดข้อความเก่ากว่า</label>
+        <name>LINE_Chat_Load_Older</name>
+    </customLabels>
+    <customLabels>
+        <label>กด Enter เพื่อส่ง, Shift+Enter เพื่อขึ้นบรรทัดใหม่</label>
+        <name>LINE_Chat_Send_Hint</name>
+    </customLabels>
+    <customLabels>
+        <label>ส่งข้อความแล้ว</label>
+        <name>LINE_Chat_Message_Sent</name>
+    </customLabels>
+    <customLabels>
+        <label>ส่งไม่สำเร็จ</label>
+        <name>LINE_Chat_Failed_Badge</name>
+    </customLabels>
+    <customLabels>
+        <label>ยังไม่ได้อ่าน {0} ข้อความ</label>
+        <name>LINE_Chat_Unread</name>
+    </customLabels>
+    <customLabels>
+        <label>ลูกค้ารายนี้บล็อกหรือลบบัญชี LINE แล้ว</label>
+        <name>LINE_Chat_Unfollowed</name>
+    </customLabels>
 </Translations>

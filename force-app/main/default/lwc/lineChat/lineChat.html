@@ -1,0 +1,148 @@
+<template>
+  <lightning-card title={labels.title} icon-name="standard:messaging_user">
+    <div class="slds-var-p-horizontal_small">
+      <template lwc:if={isLoading}>
+        <lightning-spinner
+          alternative-text={labels.title}
+          size="small"
+        ></lightning-spinner>
+      </template>
+
+      <template lwc:if={errorMessage}>
+        <div
+          class="slds-text-color_error slds-var-m-bottom_x-small"
+          role="alert"
+        >
+          {errorMessage}
+        </div>
+      </template>
+
+      <!-- No conversation yet: the rep invites the customer (wired in M6) -->
+      <template lwc:if={showEmptyState}>
+        <div
+          class="slds-align_absolute-center slds-var-p-vertical_medium slds-text-align_center"
+        >
+          <div>
+            <p class="slds-text-color_weak slds-var-m-bottom_small">
+              {labels.noConversations}
+            </p>
+            <lightning-button
+              label={labels.invite}
+              icon-name="utility:share"
+              onclick={handleInvite}
+            ></lightning-button>
+          </div>
+        </div>
+      </template>
+      <template lwc:elseif={hasConversations}>
+        <!-- One tab per OA when the customer talks to more than one rep -->
+        <template lwc:if={hasMultipleConversations}>
+          <div class="slds-var-m-bottom_x-small">
+            <template for:each={conversations} for:item="conversation">
+              <button
+                key={conversation.id}
+                class="slds-button slds-button_neutral slds-var-m-right_xx-small"
+                data-id={conversation.id}
+                onclick={handleConversationSelect}
+              >
+                {conversation.oaName}
+              </button>
+            </template>
+          </div>
+        </template>
+
+        <template lwc:if={showUnfollowedBanner}>
+          <div class="slds-var-m-bottom_x-small">
+            <lightning-icon
+              icon-name="utility:warning"
+              size="x-small"
+              variant="warning"
+            ></lightning-icon>
+            <span class="slds-var-m-left_xx-small slds-text-color_weak"
+              >{labels.unfollowed}</span
+            >
+          </div>
+        </template>
+
+        <div class="line-messages slds-scrollable_y">
+          <template lwc:if={hasMore}>
+            <div class="slds-align_absolute-center slds-var-m-bottom_x-small">
+              <lightning-button
+                label={labels.loadOlder}
+                variant="base"
+                onclick={handleLoadOlder}
+              ></lightning-button>
+            </div>
+          </template>
+
+          <template lwc:if={showNoMessages}>
+            <p
+              class="slds-text-color_weak slds-align_absolute-center slds-var-p-vertical_medium"
+            >
+              {labels.noMessages}
+            </p>
+          </template>
+
+          <template for:each={messageViews} for:item="message">
+            <div key={message.key} class={message.rowClass}>
+              <div class={message.bubbleClass}>
+                <!-- Message text is rendered as text, never as HTML (09 §7) -->
+                <template lwc:if={message.isText}>
+                  <p class="line-text">{message.text}</p>
+                </template>
+                <template lwc:else>
+                  <p class="slds-text-color_weak">{message.placeholder}</p>
+                </template>
+
+                <div
+                  class="slds-text-body_small slds-text-color_weak slds-var-m-top_xx-small"
+                >
+                  <lightning-formatted-date-time
+                    value={message.sentAt}
+                    hour="2-digit"
+                    minute="2-digit"
+                    day="numeric"
+                    month="short"
+                  ></lightning-formatted-date-time>
+                  <template lwc:if={message.isFailed}>
+                    <span
+                      class="slds-text-color_error slds-var-m-left_xx-small"
+                    >
+                      {message.failedLabel}
+                      <template lwc:if={message.failedDetail}>
+                        — {message.failedDetail}
+                      </template>
+                    </span>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="slds-var-m-top_x-small">
+          <lightning-textarea
+            label={labels.inputPlaceholder}
+            variant="label-hidden"
+            placeholder={labels.inputPlaceholder}
+            value={draft}
+            max-length={maxLength}
+            onchange={handleDraftChange}
+            onkeydown={handleKeyDown}
+          ></lightning-textarea>
+          <div class="slds-grid slds-grid_align-spread slds-var-m-top_xx-small">
+            <span class="slds-text-body_small slds-text-color_weak"
+              >{labels.sendHint}</span
+            >
+            <lightning-button
+              variant="brand"
+              label={labels.send}
+              disabled={isSendDisabled}
+              onclick={handleSend}
+            ></lightning-button>
+          </div>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+.line-messages {
+  max-height: 24rem;
+  min-height: 8rem;
+}
+
+.line-bubble {
+  max-width: 80%;
+  border-radius: 0.75rem;
+}
+
+.line-bubble_inbound {
+  background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
+}
+
+.line-bubble_outbound {
+  background-color: var(--slds-g-color-success-container-1, #d4f2d8);
+}
+
+/* Customer text can contain anything, including long links: wrap it, never let it overflow. */
+.line-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

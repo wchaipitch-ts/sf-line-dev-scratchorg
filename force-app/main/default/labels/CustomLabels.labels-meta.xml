@@ -206,4 +206,102 @@
         <value
     >This customer has blocked or removed the LINE account, so messages can't be delivered.</value>
     </labels>
+    <labels>
+        <fullName>LINE_Chat_Title</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chat panel card title</shortDescription>
+        <value>LINE Chat</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_No_Conversations</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Empty state on the Contact page</shortDescription>
+        <value>This contact has no LINE conversation yet.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Invite</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Button that starts the QR invite (M6)</shortDescription>
+        <value>Invite via LINE</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_No_Messages</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Conversation with no messages</shortDescription>
+        <value>No messages yet.</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Input_Placeholder</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message box placeholder</shortDescription>
+        <value>Write a message…</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Send</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Send button</shortDescription>
+        <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Load_Older</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Button above the first message</shortDescription>
+        <value>Load older messages</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Send_Hint</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hint under the message box</shortDescription>
+        <value>Enter to send, Shift+Enter for a new line</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Message_Sent</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Toast after a successful send</shortDescription>
+        <value>Message sent</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Failed_Badge</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Badge on a failed message</shortDescription>
+        <value>Not delivered</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Unread</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unread badge. {0} = count</shortDescription>
+        <value>{0} unread</value>
+    </labels>
+    <labels>
+        <fullName>LINE_Chat_Unfollowed</fullName>
+        <categories>LINE Connect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription
+    >Banner when the conversation is Unfollowed</shortDescription>
+        <value>This customer has blocked or removed the LINE account.</value>
+    </labels>
 </CustomLabels>
